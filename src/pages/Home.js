@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div>
-      <h1>Landing Page do Atelier</h1>
+      <h1>Landing Page</h1>
     </div>
   );
 }
