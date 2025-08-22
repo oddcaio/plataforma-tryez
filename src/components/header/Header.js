@@ -4,8 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <header className="header">
-      <h1 className="logo">Logo</h1>
-
+      <h1 className="logo">TRYEZ</h1>
       <nav>
         <ul className="nav-list">
           <li><Link to="/coachs">Coachs</Link></li>
@@ -14,8 +13,9 @@ function Header() {
           <li><Link to="/descubra">Descubra</Link></li>
         </ul>
       </nav>
-
-      <button className="btn-login">Entrar</button>
+      <Link to="/login" className="btn-login">
+        Entrar
+      </Link>
     </header>
   );
 }
