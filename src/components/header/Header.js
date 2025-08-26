@@ -10,9 +10,10 @@ function Header() {
       <nav>
         <ul className="nav-list">
           <li>
-            <h1 className="logo">tryez
-              <AiFillCrown style={{ color: "#F2643E" }} />
-            </h1>
+<Link to="/" className="logo" style={{ fontSize: 30,  color: "#000000ff"}}>
+  tryez
+  <AiFillCrown style={{ color: "#F2643E" }} />
+</Link>
           </li>
 
           <li><Link to="/mentoria">Mentoria</Link></li>
@@ -20,7 +21,7 @@ function Header() {
           <li><Link to="/ensine">Ensine</Link></li>
           <li><Link to="/descubra">Descubra</Link></li>
           <li>
-            <Link to="/login" className="btn-login" style={{fontFamily: "'League Spartan', sans-serif"  }}>
+            <Link to="/login" className="btn-login" style={{fontFamily: "'League Spartan', sans-serif", color: "#000000ff" }}>
               Entrar
               <AiFillCaretLeft style={{ color: "#F2643E" }}/>
             </Link>
