@@ -15,12 +15,12 @@ function Header() {
             </h1>
           </li>
 
-          <li><Link to="/coachs">Coachs</Link></li>
+          <li><Link to="/mentoria">Mentoria</Link></li>
           <li><Link to="/aprenda">Aprenda</Link></li>
           <li><Link to="/ensine">Ensine</Link></li>
           <li><Link to="/descubra">Descubra</Link></li>
           <li>
-            <Link to="/login" className="btn-login">
+            <Link to="/login" className="btn-login" style={{fontFamily: "'League Spartan', sans-serif"  }}>
               Entrar
               <AiFillCaretLeft />
             </Link>
