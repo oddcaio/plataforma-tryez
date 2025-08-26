@@ -10,7 +10,7 @@ function Header() {
       <nav>
         <ul className="nav-list">
           <li>
-            <h1 className="logo">TryEz
+            <h1 className="logo">tryez
               <AiFillCrown style={{ color: "#F2643E" }} />
             </h1>
           </li>
