@@ -15,7 +15,8 @@
   margin: 0;
   font-family: 'Kode Mono', monospace;
   font-size: 40px;
-  color: #000;
+  color: #000000;
+  display: flex;
 }
 
 .header > nav {
@@ -53,6 +54,7 @@
   font-weight: bold;
   transition: transform .2s ease;
   font-family: 'League Spartan', sans-serif;
+  display: flex;
 }
 
 .btn-login:hover {
