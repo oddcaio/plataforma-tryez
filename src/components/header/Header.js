@@ -22,7 +22,7 @@ function Header() {
           <li>
             <Link to="/login" className="btn-login" style={{fontFamily: "'League Spartan', sans-serif"  }}>
               Entrar
-              <AiFillCaretLeft />
+              <AiFillCaretLeft style={{ color: "#F2643E" }}/>
             </Link>
           </li>
         </ul>
