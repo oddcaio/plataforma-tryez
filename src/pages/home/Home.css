@@ -1,31 +1,50 @@
+:root {
+  --h1-1920: 30;
+  --p-1920: 25;
+}
+
 .home {
-    background-color: #fff;
-    width: 40%;
-    margin: auto;
-    text-align: left;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: 'League Spartan', sans-serif;
-    color: #000;
+  background-color: #fff;
+  width: min(40%, 760px);
+  margin: 48px auto;
+  text-align: left;
+  border-radius: 10px;
+  padding: clamp(16px, calc(20px * (100vw / 1920)), 28px);
+  font-family: 'League Spartan', sans-serif;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.25;
+  box-sizing: border-box;
 }
 
 h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
+  font-size: clamp(20px, calc(var(--h1-1920) * 1px * (100vw / 1920)), 42px);
+  margin: 0 0 clamp(16px, calc(40px * (100vw / 1920)), 44px);
+  font-weight: 600;
 }
 
 p {
-    font-size: 25px;
-    margin: 6px 0;
-    font-weight: lighter;
+  font-size: clamp(16px, calc(var(--p-1920) * 1px * (100vw / 1920)), 32px);
+  margin: 6px 0;
 }
 
-.orange {
-    color: #ff6600;
-    font-weight: bold;
+.orange { 
+  color: #ff6600; 
+  font-weight: 700; 
 }
 
-.green {
-    color: #009933;
-    font-weight: bold;
+.green  { 
+  color: #009933; 
+  font-weight: 700; 
+}
+
+@media (max-width: 1024px) {
+  .home { width: 72vw; }
+}
+
+@media (max-width: 640px) {
+  .home {
+    width: 92vw;
+    border-radius: 8px;
+  }
 }
