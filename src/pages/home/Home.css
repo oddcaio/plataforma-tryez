@@ -5,18 +5,19 @@
     text-align: left;
     border-radius: 10px;
     padding: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     color: #000;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 25px;
     margin: 6px 0;
+    font-weight: lighter;
 }
 
 .orange {
