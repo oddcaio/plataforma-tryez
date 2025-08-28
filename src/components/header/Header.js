@@ -21,7 +21,7 @@ function Header() {
           <li><Link to="/ensine">Ensine</Link></li>
           <li><Link to="/descubra">Descubra</Link></li>
           <li>
-            <Link to="/login" className="btn-login" style={{fontFamily: "'League Spartan', sans-serif", color: "#000000ff" }}>
+            <Link to="/login" className="btn-login" style={{fontFamily: "'League Spartan', sans-serif"}}>
               Entrar
               <AiFillCaretLeft style={{ color: "#F2643E" }}/>
             </Link>

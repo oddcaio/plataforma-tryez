@@ -45,27 +45,122 @@
   color: orange;
 }
 
+.nav-list a:not(.btn-login):hover {
+  color: orange;
+}
+
 .btn-login {
-  color: #F2643E;
+  position: relative;
+  overflow: hidden;
+  color: #000;
   padding: 10px 20px;
   border: 2px solid #F2643E;
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform .2s ease;
   font-family: 'League Spartan', sans-serif;
   display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  transition: color 0.3s ease;
+  z-index: 0;
+}
+
+.btn-login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #F2643E;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.btn-login:hover::before {
+  transform: scale(1);
 }
 
 .btn-login:hover {
-  transform: scale(1.05);
+  color: #fff;
 }
+
+.btn-login svg {
+  color: inherit;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.btn-login:hover svg {
+  transform: rotate(-90deg);
+}
+/* -- */
+.nav-list a:not(.btn-login):hover {
+  color: orange;
+}
+
+.nav-list .btn-login {
+  position: relative;
+  overflow: hidden;
+  color: #000;
+  padding: 10px 20px;
+  border: 2px solid #F2643E;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  transition: color 0.3s ease;
+  z-index: 0;
+}
+
+.nav-list .btn-login::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: #F2643E;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+  border-radius: 22px;
+  z-index: -1;
+  will-change: transform;
+}
+
+.nav-list .btn-login:hover::before,
+.nav-list .btn-login:focus-visible::before {
+  transform: scale(1);
+}
+
+.nav-list .btn-login:hover,
+.nav-list .btn-login:focus-visible {
+  color: #fff !important;
+}
+
+.nav-list .btn-login svg {
+  color: inherit;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.nav-list .btn-login:hover svg,
+.nav-list .btn-login:focus-visible svg {
+  color: inherit !important;
+  transform: rotate(-90deg);
+}
+
+/* -- */
+
+
 .a {
   box-shadow: inset 0 8px 12px -6px #C4310A, 0 6px 6px -3px #F26
 }
 
 .nav-list a:not(.btn-login):not(.logo) {
-  position: relative;            /* base p/ posicionar a barrinha */
+  position: relative;
   text-decoration: none;
   outline: none;
 }
@@ -73,12 +168,12 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;                  /* afasta um pouquinho do texto */
+  bottom: -6px;
   width: 100%;
-  height: 2px;                   /* espessura da barra */
-  background-color: #000;        /* barra preta */
-  transform: scaleX(0);          /* começa invisível */
-  transform-origin: left;        /* anima da esquerda p/ direita */
+  height: 2px;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform .25s ease;
 }
 .nav-list a:not(.btn-login):not(.logo):hover::after,
@@ -86,5 +181,5 @@
   transform: scaleX(1);
 }
 .nav-list a:hover {
-  color: orange;
+  color: #C4310A;
 }
