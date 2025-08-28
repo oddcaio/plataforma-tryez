@@ -1,6 +1,6 @@
 :root {
   --h1-1920: 30;
-  --p-1920: 25;
+  --p-1920: 28;
 }
 
 .home {
@@ -18,15 +18,15 @@
 }
 
 h1 {
-  font-size: clamp(20px, calc(var(--h1-1920) * 1px * (100vw / 1920)), 42px);
-  margin: 0 0 clamp(16px, calc(40px * (100vw / 1920)), 44px);
+  margin: 0 0 clamp(20px, calc(40px * (100vw / 1920)), 48px);
   font-weight: 600;
 }
 
 p {
-  font-size: clamp(16px, calc(var(--p-1920) * 1px * (100vw / 1920)), 32px);
-  margin: 6px 0;
+  font-size: clamp(18px, calc(22px + 0.4vw), 36px);
+  margin: 8px 0;
 }
+
 
 .orange { 
   color: #ff6600; 
