@@ -5,8 +5,8 @@
 
 .home {
   display: flex;
+  justify-content: center;
   flex-direction: row;
-  justify-content: space-between;
   background-color: #fff;
   width: min(40%, 760px);
   margin: 48px auto;
@@ -20,51 +20,75 @@
   box-sizing: border-box;
   gap: 20px;
 }
+
 h1 {
   margin: 0 0 clamp(20px, calc(40px * (100vw / 1920)), 48px);
   font-weight: 600;
 }
+
 p {
-  font-size: clamp(18px, calc(22px + 0.4vw), 36px);
   margin: 8px 0;
 }
-.orange { 
-  color: #ff6600; 
-  font-weight: 700; 
-}
-.green  { 
-  color: #009933; 
-  font-weight: 700; 
+
+.orange {
+  color: #ff6600;
+  font-weight: 700;
 }
 
-.content-box1, .content-box2 {
-  flex: 1;
-  padding: 20px;
+.green {
+  color: #009933;
+  font-weight: 700;
 }
+
+.content-box1,
+.content-box2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-box1 {
+  min-width: 650px;
+  flex-wrap: wrap;
+}
+
+.content-box1 h1 {
+  font-size: 48px;
+  flex-wrap: wrap;
+}
+
+.content-box1 p {
+  font-size: 32px;
+  flex-wrap: wrap;
+}
+
 
 .content-box2 {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   border: 3px solid #E5E5E5;
+  min-width: 400px;
 }
+
 .content-box2 h2 {
   font-size: 24px;
   margin-bottom: 10px;
   font-weight: bold;
 }
+
 .content-box2 p {
   font-size: 16px;
   color: #333;
 }
+
 .social-login {
   display: flex;
   gap: 10px;
 }
+
 .social-btn {
   padding: 10px;
   border: none;
@@ -74,14 +98,17 @@ p {
   text-align: center;
   border-radius: 8px;
 }
+
 .apple-btn {
   background-color: #333;
   color: white;
 }
+
 .google-btn {
   background-color: #4285F4;
   color: white;
 }
+
 form.register-form {
   display: flex;
   flex-direction: column;
@@ -89,16 +116,19 @@ form.register-form {
   width: 100%;
   max-width: 350px;
 }
+
 form.register-form input {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 14px;
 }
+
 form.register-form .terms {
   font-size: 12px;
   color: #666;
 }
+
 form.register-form .submit-btn {
   background-color: #4CAF50;
   color: white;
@@ -108,25 +138,90 @@ form.register-form .submit-btn {
   font-size: 16px;
   cursor: pointer;
 }
+
 form.register-form .submit-btn:hover {
   background-color: #45a049;
 }
+
 form.register-form a {
   color: #007bff;
   text-decoration: none;
 }
+
 form.register-form a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 1200px) {
+  .home .content-box1 {
+    min-width: fit-content;
+  }
+
+  .home .content-box1 h1 {
+    font-size: 32px;
+  }
+
+  .home .content-box1 p {
+    font-size: 20px;
+  }
+
+  .home .content-box2 {
+    width: 100%;
+    padding: 15px;
+  }
+}
 
 @media (max-width: 1024px) {
-  .home { width: 72vw; }
+  .home {
+    width: 72vw;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home .content-box1,
+  .home .content-box2 {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .home .content-box1 h1 {
+    font-size: 26px;
+  }
+
+  .home .content-box1 p {
+    font-size: 18px;
+  }
+  
+  .home .content-box2 {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 640px) {
   .home {
     width: 92vw;
     border-radius: 8px;
+  }
+
+  .home .content-box1 {
+    min-width: fit-content;
+  }
+
+  .home .content-box1 h1 {
+    font-size: 18px;
+  }
+
+  .home .content-box1 p {
+    font-size: 14px;
+  }
+
+  .home .content-box2 {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
   }
 }
