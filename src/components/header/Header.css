@@ -21,11 +21,9 @@
   flex: none;
   width: 100%;
 }
-
 .nav-list a svg {
   transition: transform 0.5s ease;
 }
-
 .nav-list a:hover svg {
   transform: rotate(360deg);
 }
