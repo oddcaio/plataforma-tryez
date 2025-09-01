@@ -8,7 +8,7 @@ import '../mentoria/Mentoria.css'
 
 const coaches = [
     { src: man1, nome: 'joão', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
-    { src: man2, nome: 'maria', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
+    { src: man2, nome: 'mohhamed', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
     { src: man3, nome: 'alex', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
     { src: woman, nome: 'sofia', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
 ]
@@ -28,12 +28,11 @@ export default function Mentoria() {
                         <div className="stack">
                             {coaches.map((c, idx) => {
                                 const n = coaches.length
-                                const pos = (idx - i + n) % n               // 0 = ativa; 1,2... = atrás
+                                const pos = (idx - i + n) % n
 
-                                // presets para 4 itens (usa fallback linear se tiver mais)
                                 const opPreset = [1, 0.78, 0.67, 0.5]
                                 const scalePreset = [1, 0.88, 0.80, 0.62]
-                                const shiftPreset = [0, -40, -90, -160]      // a última (primeira lá do começo) vai mais pro fundo
+                                const shiftPreset = [0, -40, -90, -160]
 
                                 const opacity = opPreset[pos] ?? (0.5 + 0.5 * ((n - 1 - pos) / (n - 1)))
                                 const scale = scalePreset[pos] ?? (0.62 + 0.38 * ((n - 1 - pos) / (n - 1)))
