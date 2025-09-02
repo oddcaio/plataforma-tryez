@@ -1,13 +1,11 @@
 import { useState } from 'react'
 
-import man1 from '../../assets/man1.png'
 import man2 from '../../assets/man2.png'
 import man3 from '../../assets/man3.png'
 import woman from '../../assets/woman.png'
 import '../mentoria/Mentoria.css'
 
 const coaches = [
-    { src: man1, nome: 'joão', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
     { src: man2, nome: 'mohhamed', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
     { src: man3, nome: 'alex', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
     { src: woman, nome: 'sofia', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
@@ -30,11 +28,11 @@ export default function Mentoria() {
                                 const n = coaches.length
                                 const pos = (idx - i + n) % n
 
-                                const opPreset = [1, 0.78, 0.67, 0.5]
-                                const scalePreset = [1, 0.88, 0.80, 0.62]
-                                const shiftPreset = [0, -40, -90, -160]
+                                const blurPreset = [0, 2, 2];
+                                const scalePreset = [1, 1, 1];
+                                const shiftPreset = [0, -30, -60];
 
-                                const opacity = opPreset[pos] ?? (0.5 + 0.5 * ((n - 1 - pos) / (n - 1)))
+                                const blur = blurPreset[pos] ?? (5 * ((n - 1 - pos) / (n - 1)))
                                 const scale = scalePreset[pos] ?? (0.62 + 0.38 * ((n - 1 - pos) / (n - 1)))
                                 const shift = shiftPreset[pos] ?? (-50 * pos)
 
@@ -46,8 +44,9 @@ export default function Mentoria() {
                                         className={`photo ${pos === 0 ? 'active' : 'behind'}`}
                                         style={{
                                             transform: `translateX(${shift}px) scale(${scale})`,
-                                            opacity,
-                                            zIndex: n - pos
+                                            filter: `blur(${blur}px)`,
+                                            zIndex: n - pos,
+                                            height: '437.2px'
                                         }}
                                     />
                                 )
