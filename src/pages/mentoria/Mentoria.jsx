@@ -1,25 +1,27 @@
-import { useState } from 'react'
-
-import man2 from '../../assets/man2.png'
-import man3 from '../../assets/man3.png'
-import woman from '../../assets/woman.png'
 import '../mentoria/Mentoria.css'
 
-const coaches = [
-    { src: man2, nome: 'mohhamed', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
-    { src: man3, nome: 'alex', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
-    { src: woman, nome: 'sofia', desc: ['ponto 1', 'ponto 2', 'ponto 3'] },
-]
 
 export default function Mentoria() {
-    // const [i, setI] = useState(0)
-    // const prev = () => setI((i - 1 + coaches.length) % coaches.length)
-    // const next = () => setI((i + 1) % coaches.length)
+    <div className='container-mentoria'>
+        <div className='box1'>
+            <div className='coaches'>
+                <div className='fotos'>
+                    <div className="ordem">1/4</div>
+                    <img src=""
+                </div>
+                <div className='fotos'>
+                    <div className="ordem">2/4</div>
+                </div>
 
-    return (
+                <div className='fotos'>
+                    <div className="ordem">3/4</div>
+                </div>
 
-        <div>
-         hello world
+                <div className='fotos'>
+                    <div className="ordem">4/4</div>
+                </div>
+            </div>
         </div>
+    </div>
     )
 }
