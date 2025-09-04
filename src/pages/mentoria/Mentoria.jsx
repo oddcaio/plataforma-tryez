@@ -36,9 +36,12 @@ export default function Mentoria() {
                 <div className='nomes'></div>
             </div>
 
-            <a  className='antes' onClick={() => plusSlides(-1)}>
-                $#10094
-            </a>
+<a className="prev" onClick={() => plusSlides(-1)}>
+  &#10094;
+</a>
+<a className="next" onClick={() => plusSlides(1)}>
+  &#10095;
+</a>
         </div>
         );
 }
