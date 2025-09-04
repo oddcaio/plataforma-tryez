@@ -8,6 +8,16 @@ import img4 from '../../assets/4.png';
 
 export default function Mentoria() {
 
+    const slides = [img1, img2, img3, img4];
+    const [index, setIndex] = useState(0);
+
+    const plusSlides = (n) => {
+        let newIndex = index + n;
+        if (newIndex < 0) newIndex = slides.length - 1;
+        if (newIndex >= slides.length) newIndex = 0;
+        setIndex(newIndex);
+    };
+
     return (
         <div className="fotos-container">
 
