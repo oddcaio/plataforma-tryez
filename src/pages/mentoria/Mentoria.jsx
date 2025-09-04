@@ -29,6 +29,16 @@ export default function Mentoria() {
                 <img src={img3} alt="Foto de instrutor da TRYEZ" />
                 <div className='nomes'></div>
             </div>
+
+            <div className='slides'>
+                <div className='ordem'>4/4</div>
+                <img src={img4} alt="Foto de instrutor da TRYEZ" />
+                <div className='nomes'></div>
+            </div>
+
+            <a  className='antes' onClick={() => plusSlides(-1)}>
+                $#10094
+            </a>
         </div>
-    );
+        );
 }
