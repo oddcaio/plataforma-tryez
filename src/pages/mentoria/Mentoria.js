@@ -11,8 +11,8 @@ export default function Mentoria() {
     const [imgIndex, setImgIndex] = useState(0);
 
     const objetosProfessores = [
-        { nome: 'João', descricao: 'Professor de Educação Física', image: img1 },
-        { nome: 'Marília', descricao: 'Professora de Pilates', image: img2 },
+        { nome: 'Cleber', descricao: 'Treinador de CSGO', image: img1 },
+        { nome: 'Marília', descricao: 'Treinadora ', image: img2 },
         { nome: 'Pedro', descricao: 'Professor de Física', image: img3 },
         { nome: 'Augusto', descricao: 'Professor de LoL', image: img4 },
     ];
