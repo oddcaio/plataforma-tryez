@@ -1,37 +1,63 @@
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box
+}
 
 .fotos-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 82px);
+  justify-content: center;
+  align-items: center;
 }
 
 .slides {
-  display: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
-.prev, .next {
+.fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.descricao h1 {
+  margin-bottom: 40px;
+}
+
+.descricao {
+  display: flex;
+  width: 500px;
+  gap: 20px;
+}
+
+.prev,
+.next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: #000;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
+  border-radius: 10px;
+  margin: 10px;
+  border: none;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .text {
@@ -63,7 +89,8 @@
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -73,6 +100,11 @@
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
