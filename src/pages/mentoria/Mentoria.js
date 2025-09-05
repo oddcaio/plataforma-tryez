@@ -11,10 +11,10 @@ export default function Mentoria() {
     const [imgIndex, setImgIndex] = useState(0);
 
     const objetosProfessores = [
-        { nome: 'Cleber', descricao: 'Treinador de CSGO', image: img1 },
-        { nome: 'Marília', descricao: 'Treinadora em pintura clássica', image: img2 },
-        { nome: 'Pedro', descricao: 'Professor ', image: img3 },
-        { nome: 'Augusto', descricao: 'Professor de LoL', image: img4 },
+        { nome: 'Cleber Matabobo', descricao: 'Treinador de CSGO', image: img1 },
+        { nome: 'Marília Carvalho', descricao: 'Treinadora em pintura clássica', image: img2 },
+        { nome: 'Leonardo Takamura', descricao: 'Treinador em guitarra', image: img3 },
+        { nome: 'Augusto Silva', descricao: 'Treinador em Darksouls', image: img4 },
     ];
 
     useEffect(() => {
