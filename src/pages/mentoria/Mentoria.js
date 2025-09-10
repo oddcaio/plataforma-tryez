@@ -11,7 +11,7 @@ export default function Mentoria() {
     const [imgIndex, setImgIndex] = useState(0);
 
     const objetosProfessores = [
-        { nome: 'Cleber Matabobo', descricao: 'Treinador de CSGO', image: img1 },
+        { nome: 'Clau Matabobo', descricao: 'Treinador de CSGO', image: img1 },
         { nome: 'Marília Carvalho', descricao: 'Treinadora em pintura clássica', image: img2 },
         { nome: 'Leonardo Takamura', descricao: 'Treinador em guitarra', image: img3 },
         { nome: 'Augusto Silva', descricao: 'Treinador em Darksouls', image: img4 },
@@ -55,7 +55,7 @@ export default function Mentoria() {
 
                 <div className="descricao">
                     <h1 className="nome">{atual.nome}</h1>
-                    <h2 className="profissao">Profissão: {atual.descricao}</h2>
+                    <h2 className="profissao">{atual.descricao}</h2>
                 </div>
             </div>
         </div>

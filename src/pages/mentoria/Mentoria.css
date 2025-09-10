@@ -24,12 +24,14 @@
 
 .descricao {
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: 300px;
 }
 
 .descricao h1 {
   margin-bottom: 40px;
+  background-color: #E5E5E5;
 }
 
 .descricao {
