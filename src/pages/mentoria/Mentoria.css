@@ -4,10 +4,9 @@
 
 .fotos-container {
   display: flex;
-  width: 100%;
-  height: calc(100vh - 82px);
-  justify-content: center;
-  align-items: center;
+  width: fit-content;
+  border: 2px solid #E5E5E5;
+  border-radius: 5%;
 }
 
 .slides {
@@ -21,7 +20,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .descricao {
@@ -38,6 +36,8 @@
   display: flex;
   width: 500px;
   gap: 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 5%;
 }
 
 .prev,
@@ -45,9 +45,7 @@
   cursor: pointer;
   padding: 16px;
   color: #000;
-  font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
   user-select: none;
   border-radius: 10px;
   margin: 10px;
@@ -57,54 +55,5 @@
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
+  background-color: rgba(0, 0, 0, 0.1);
 }

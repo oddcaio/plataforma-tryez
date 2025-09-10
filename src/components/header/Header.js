@@ -6,7 +6,6 @@ import { AiFillCaretLeft } from "react-icons/ai";
 function Header() {
   return (
     <header className="header">
-
       <nav>
         <ul className="nav-list">
           <li>
